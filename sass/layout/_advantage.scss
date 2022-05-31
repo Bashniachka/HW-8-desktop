@@ -1,0 +1,33 @@
+.advantage {
+    background-color: var(--header-color);
+}
+
+.advantage-icon-bg {
+    width: 270px;
+    @extend %align-list;
+    height: 120px;
+    margin-bottom: 30px;
+    justify-content: center;
+    background-color: var(--light-background-color);
+}
+
+.advantage-list {
+    display: flex;
+}
+
+.advantage-item:not(:first-child) {
+    margin-left: 30px;
+}
+
+
+.section-title {
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--primary-title-color);
+    margin-bottom: 10px;
+}
+
+.advantage-text {
+    line-height: 1.71;
+}
