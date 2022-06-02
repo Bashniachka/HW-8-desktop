@@ -4,8 +4,8 @@
 
 
 .clients__box {
-    width: 170px;
-    height: 92px;
+    // width: 170px;
+    // height: 92px;
     border: 1px solid var(--color-icon);
     border-radius: 4px;
     @extend %align-list;
@@ -24,7 +24,7 @@
     border-color: var(--accent-color);
 }
 &+&{
-    margin-left: 30px;
+    // margin-left: 30px;
 }
 }
 
@@ -35,7 +35,7 @@
 
 
 .clients__list{
-    display: flex;
+    // display: flex;
     justify-content: center;
-    margin-bottom: 30px;
+    // margin-bottom: 30px;
 }
