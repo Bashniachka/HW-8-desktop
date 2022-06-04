@@ -81,9 +81,17 @@ body {
   text-decoration: none;
 }
 
-.padding-section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+@media screen and (max-width: 768px) {
+  .padding-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 769px) {
+  .padding-section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .conteiner {
@@ -307,9 +315,11 @@ body {
 .header {
   border-bottom: 1px solid #ececec;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   .header {
     position: relative;
+    display: flex;
+    align-items: center;
     height: 60px;
     background-color: var(--main-background-color);
   }
@@ -319,13 +329,17 @@ body {
   margin-right: auto;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   .menu-button {
     display: inline-flex;
     margin: 0;
     padding: 0;
     border: none;
     background-color: transparent;
+    z-index: 2;
+  }
+  .menu-button .icon-menu {
+    display: block;
   }
   .menu-button .icon-close {
     display: none;
@@ -337,23 +351,33 @@ body {
     display: none;
   }
 }
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 768px) {
   .menu-button {
     display: none;
   }
 }
-@media screen and (max-width: 480px) {
-  .menu-content {
+@media screen and (max-width: 767px) {
+  .menu-conteiner {
+    display: none;
     position: absolute;
-    top: 100%;
+    top: 0;
     left: 0;
     width: 100%;
+    height: 100vh;
     background-color: #fff;
+    text-align: left;
+    z-index: 1;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    padding-left: 40px;
+  }
+  .menu-conteiner.is-open {
+    display: block;
   }
 }
 
 .menu-item:not(:last-child) {
-  margin-right: 50px;
+  margin-bottom: 32px;
 }
 
 .list-contact {
@@ -371,6 +395,12 @@ body {
 }
 .menu-link:hover, .menu-link:focus {
   color: var(--accent-color);
+}
+@media screen and (max-width: 767px) {
+  .menu-link {
+    font-size: 40px;
+    line-height: 1.18;
+  }
 }
 
 .contact-item:not(:first-child) {
@@ -409,6 +439,11 @@ body {
   bottom: -1px;
   left: 0;
   background-color: var(--accent-color);
+}
+@media screen and (max-width: 767px) {
+  .menu-link.link.current::after {
+    display: none;
+  }
 }
 
 .hero {
