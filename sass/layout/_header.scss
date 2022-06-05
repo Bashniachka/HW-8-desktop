@@ -48,11 +48,18 @@
 .menu-conteiner {
     @media screen and (max-width: 767px) {
         display: none;
-        position: absolute;
+        position: fixed;
+        overflow-y: scroll;
         top: 0;
         left: 0;
         width: 100%;
         height: 100vh;
+        display: flex;
+        justify-content: space-between;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        flex-direction: column;
+        -webkit-box-pack: justify;
         background-color: #fff;
         text-align: left;
         z-index: 1;
@@ -68,12 +75,14 @@
 
 
 .header-nav {
+    justify-content: space-between;
     @extend %align-list; 
 }
 
-// .menu-list {
-//     display: flex;
-// }
+.menu-list {
+    display: block;
+}
+
 
 .menu-item:not(:last-child) {
     margin-bottom: 32px;
@@ -81,16 +90,18 @@
 }
 
 .list-contact {
+    display: flex;
+    flex-direction: column-reverse;
     // display: flex;
-    margin-left: auto;
+    // margin-left: auto;
 }
 
 .menu-link {
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    // padding-top: 32px;
+    // padding-bottom: 32px;
     color: var(--primary-title-color);
     transition: color var(--main-transition-duration) var(--main-transition-timing);
     &:hover,
@@ -103,7 +114,8 @@
 }
 }
 .contact-item:not(:first-child) {
-    margin-left: 50px;
+    margin-bottom: 32px;
+    // margin-left: 50px;
 }
 
 .contact-link {
@@ -111,8 +123,8 @@
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    // padding-top: 32px;
+    // padding-bottom: 32px;
     color: inherit;
     transition: color var(--main-transition-duration) var(--main-transition-timing);
     &:hover,
@@ -143,4 +155,19 @@
             display: none;
         }
     }
+}
+
+.menu-social-list {
+    margin-top: 64px;
+    display: flex;
+}
+
+.manu-social-link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    color: var(--accent-color);
+    border-right: 2px red;
+    margin-right: 20px;
 }
