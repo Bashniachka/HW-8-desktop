@@ -23,9 +23,6 @@
         border: none;
         background-color: transparent;
         z-index: 2;
-        & .icon-menu {
-            display: block;
-        }
         & .icon-close {
             display: none;
         }
@@ -54,12 +51,11 @@
         left: 0;
         width: 100%;
         height: 100vh;
-        display: flex;
         justify-content: space-between;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
+        // -webkit-box-orient: vertical;
+        // -webkit-box-direction: normal;
         flex-direction: column;
-        -webkit-box-pack: justify;
+        // -webkit-box-pack: justify;
         background-color: #fff;
         text-align: left;
         z-index: 1;
