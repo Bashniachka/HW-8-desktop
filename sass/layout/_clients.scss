@@ -1,11 +1,21 @@
 .clients{
- @extend %title-list;
+    font-size: 28px;
+line-height: 1.18;
+text-align: center;
+letter-spacing: 0.03em;
+color: var(--primary-title-color);
+margin-bottom: 30px;
+@media screen and (min-width: 1200px) {
+    font-size: 36px;
+    line-height: 1.17;
+    margin-bottom: 50px;
+}
 }
 
 
 .clients__box {
-    // width: 170px;
-    // height: 92px;
+    height: 92px;
+    max-width: 210px;
     border: 1px solid var(--color-icon);
     border-radius: 4px;
     @extend %align-list;
@@ -13,18 +23,27 @@
     color: var(--color-icon);
     transition: color var(--main-transition-duration) var(--main-transition-timing),
     border-color var(--main-transition-duration) var(--main-transition-timing);
+    @media screen and (min-width: 768px) {
+        width: 226px;
+    }
+    @media screen and (min-width: 1200px) {
+        width: 170px;
+    }
+
 }
 
 
 .clients__item{
     cursor: pointer;
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
     & :hover,
     &:focus {
     color: var(--accent-color);
     border-color: var(--accent-color);
 }
-&+&{
-    // margin-left: 30px;
+@media screen and (min-width: 768px) and (max-width: 1199px){
+    width: calc((100% - 6 * 15px) / 3);
 }
 }
 
@@ -35,7 +54,10 @@
 
 
 .clients__list{
-    // display: flex;
-    justify-content: center;
-    // margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+    @media screen and (min-width: 1200px) {
+        flex-wrap: nowrap;
+    }
 }
