@@ -1,12 +1,17 @@
 .about-section {
+    display: none;
     background-color: var(--header-color);
     padding-top: 0;
+    @media screen and (min-width: 1200px) {
+        display: block;
+    }
 } 
-.about__item:not(:last-child) {
-    // margin-right: 30px;
+
+.about__item:not(:last-child){
+    margin-right: 30px;
 }
 .about__list {
-    // display: flex;
+    display: flex;
 }
 
 .about {
