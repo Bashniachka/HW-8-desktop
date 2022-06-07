@@ -40,10 +40,11 @@
     letter-spacing: 0.03em;
     color: var(--primary-title-color);
     margin-bottom: 30px;
-
     @media screen and (min-width: 1200px) {
-        @extend %title-list;
-    }
+        font-size: 36px;
+        line-height: 1.17;
+        margin-bottom: 50px;
+}
 }
 
 .team-img {
@@ -95,7 +96,6 @@ margin-bottom: 30px;
 }
 }
 
-.team-soc-icon{
-    fill:currentColor;
-    
+.team-soc-icon {
+    fill:currentColor; 
 }
